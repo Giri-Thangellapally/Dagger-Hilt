@@ -1,6 +1,7 @@
 package com.example.practice_mvvm.network
 
 import com.example.practice_mvvm.network.WebConstants.Companion.BASE_URL
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,6 +30,7 @@ object RetrofitInstance {
             .client(httpClient.build())
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
 
         return retrofit.create(ApiInterface::class.java)
