@@ -25,6 +25,7 @@ class BaseApp : Application() {
                 LoginviewModelModule,
                 userListRepositoryModule,
                 apiModule,
+                userDataStoreModule,
                 retrofitModule)
             )
         }

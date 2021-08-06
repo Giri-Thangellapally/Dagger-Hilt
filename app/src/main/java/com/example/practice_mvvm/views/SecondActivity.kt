@@ -1,23 +1,15 @@
 package com.example.practice_mvvm.views
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentActivity
-import androidx.navigation.fragment.NavHostFragment
 import com.example.practice_mvvm.R
-import com.example.practice_mvvm.databinding.ActivityMainBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
-class MainActivity : FragmentActivity() {
-    private val TAG = "MainActivity"
-
-    lateinit var binding: ActivityMainBinding
+class SecondActivity : AppCompatActivity() {
+    private  val TAG = "SecondActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setContentView(R.layout.activity_second)
         Log.d(TAG, "onCreate: ")
     }
 
@@ -45,4 +37,5 @@ class MainActivity : FragmentActivity() {
         super.onDestroy()
         Log.d(TAG, "onDestroy: ")
     }
+    
 }

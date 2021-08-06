@@ -4,7 +4,6 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id 'kotlin-kapt'
     id 'koin'
-    id 'kotlin-android-extensions'
 }
 
 android {
@@ -21,6 +20,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -60,9 +60,12 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
 
-    // ViewModel
+
+   //Life Cycle Scope
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    // ViewModel Scope
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    // LiveData
+    // LiveData Scope
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
 
     //Network
@@ -85,6 +88,8 @@ dependencies {
     implementation 'org.koin:koin-androidx-scope:2.0.1'
 
     //DataStore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation 'androidx.datastore:datastore-preferences:1.0.0'
 
+    //Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
 }

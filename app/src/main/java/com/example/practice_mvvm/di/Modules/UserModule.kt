@@ -2,6 +2,7 @@ package com.example.practice_mvvm.di.Modules
 
 import com.example.practice_mvvm.Repositories.LoginRepository
 import com.example.practice_mvvm.Repositories.UserListRepository
+import com.example.practice_mvvm.dataStore.DataStoreManager
 import com.example.practice_mvvm.network.ApiInterface
 import com.example.practice_mvvm.network.WebConstants.Companion.BASE_URL
 import com.example.practice_mvvm.viewModels.LoginViewModel
@@ -30,9 +31,13 @@ val UserviewModelModule = module {
 //Repository
 val userListRepositoryModule= module {
     single { UserListRepository(get())}
-    single {  LoginRepository(get())}
+    single {  LoginRepository(get(),get())}
 }
 
+//DataStore
+val userDataStoreModule = module {
+    single { DataStoreManager(get()) }
+}
 
 //api Module
 val apiModule= module {
