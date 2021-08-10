@@ -10,6 +10,7 @@ I have used the latest android architecture components like
 4.KOIN
 5.Coil
 6.Retrofit, Gson.
+7.Data store.
  And many more to add in future.........
  
 Please Feel Free to ask any questions and give inputs which mutually help to gain the Knowledge. 
