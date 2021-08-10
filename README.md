@@ -2,7 +2,8 @@
 
 My main intention in this project is to create PROPER MVVM Architecture using the Android Jetpack.
 
-I have used the latest android architecture components as below
+I have used the latest android architecture components like
+
 1.ViewModel
 2.LiveData
 3.Android Jetpack Navigation Component
